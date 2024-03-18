@@ -31,7 +31,7 @@ RUN /opt/flutter/bin/flutter doctor
 
 
 ENV PATH="/opt/flutter/bin:$PATH"
-ENV CMAKE_MAKE_PROGRAM="/usr/bin/ninja-build"
+ENV CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
 
 #Set up working directory to /app
@@ -45,6 +45,7 @@ COPY . .
 RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/
 RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache/.dartignore
 
+RUN export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
 # Starting the shell
 CMD ["flutter", "run", "-d", "chrome"]
