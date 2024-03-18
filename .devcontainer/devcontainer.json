@@ -18,9 +18,7 @@
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
    
     // Use 'postCreateCommand' to run commands after the container is created.
-     "postCreateCommand":[ "export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build",
-                            "sudo chown -R $(id -u):$(id -g) /opt/flutter"
-        ],
+     "postCreateCommand": "sudo chown -R $(id -u):$(id -g) /opt/flutter",
     // Configure tool-specific properties.
      "customizations": {
         "vscode": {
