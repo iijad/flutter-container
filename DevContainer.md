@@ -14,10 +14,10 @@
 1. After setting up the container, click the blue arrows at the bottom left hand corner of Visual Studio Code. 
 2. Click the ***Reopen In Container*** option.
 3. Wait as the Dev Container builds. 
-4. After it builds, you can now create Flutter apps in the container. Go to the ***command line*** by either clicking the error and warning buttons at the bottom left next to ***main***, or use ```Ctrl + Shift + P``` and type ***Shell Command*** to access it. type ***flutter create (name of app)*** on the command line, and then type ***cd (name of app)*** to access the folder. 
+4. After it builds, you can now create Flutter apps in the container. Go to the ***command line*** by either clicking the error and warning buttons at the bottom left next to ***main***, or use ```Ctrl + Shift + P``` and type ***Shell Command*** to access it. type ```flutter create (name of app)``` on the command line, and then type ```cd (name of app)``` to access the folder. 
 5. Edit or create the Flutter app by accessing the ***lib*** section of the Flutter app and editing the ***main.dart*** file. By default, the default app is already created in Flutter. 
 6. When you finish editing the app, push changes to folder/directory, and then click the blue arrows and choose the ***Rebuild Container*** option. 
-7. To run the app, go back to the command line and type ***flutter run*** to run the app. It will run the app on the default web app on your computer. 
+7. To run the app, go back to the command line and type ```flutter run``` to run the app. It will run the app on the default web app on your computer. 
 
 ### Challenges of Container Building
 - Some of the challenges of building the container included trying to set up ownership of the /opt/flutter directory. I ended up having to make the directory as a ***postCreateCommand*** as well as using sudo in front of the command to make sure it worked, even though I sacrificed some security in the process.
