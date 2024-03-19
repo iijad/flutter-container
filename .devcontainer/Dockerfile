@@ -22,17 +22,15 @@ RUN sudo apt-get update && apt-get install -y \
     pkg-config
 
 
-# Specifiying the Dart and Flutter Versions
-ENV FLUTTER_VERSION=3.21.0
-ENV DART_VERSION=3.4.0
+
 
 
 # Install Flutter and Dart
 
 
 
-RUN git clone https://github.com/flutter/flutter.git -b $FLUTTER_VERSION /opt/flutter
-RUN /opt/flutter/bin/flutter doctor
+RUN git clone https://github.com/flutter/flutter.git  /opt/flutter
+RUN /opt/flutter/bin/flutter --version
 
 
 
