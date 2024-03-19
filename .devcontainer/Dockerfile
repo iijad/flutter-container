@@ -50,5 +50,7 @@ RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache/.dartignore
 
 RUN export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
+EXPOSE 8080
+
 # Starting the shell
 CMD ["flutter", "run", "-d", "chrome"]
