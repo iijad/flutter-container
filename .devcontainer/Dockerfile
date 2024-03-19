@@ -42,7 +42,7 @@ COPY . .
 
 
 # Permissions
-RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/
+RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache
 RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache/.dartignore
 
 RUN export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
