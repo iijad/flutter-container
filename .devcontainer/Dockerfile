@@ -22,13 +22,16 @@ RUN sudo apt-get update && apt-get install -y \
     pkg-config
 
 
+# Specifiying the Dart and Flutter Versions
+ENV FLUTTER_VERSION=3.21.0
+ENV DART_VERSION=3.4.0
 
 
 # Install Flutter and Dart
 
-RUN docker pull ghcr.io/jarrodcolburn/features/flutter-sdk:0.0.4
 
-RUN git clone https://github.com/flutter/flutter.git /opt/flutter
+
+RUN git clone https://github.com/flutter/flutter.git -b $FLUTTER_VERSION /opt/flutter
 RUN /opt/flutter/bin/flutter doctor
 
 
@@ -51,7 +54,10 @@ RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache/.dartignore
 
 RUN export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
-EXPOSE 8080
+#Installing Dependancies
+RUN /opt/flutter/bin/flutter pub get
 
+
+EXPOSE 8080
 # Starting the shell
 CMD ["flutter", "run", "-d", "chrome"]
