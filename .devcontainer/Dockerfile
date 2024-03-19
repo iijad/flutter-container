@@ -12,6 +12,7 @@ RUN sudo apt-get update && apt-get install -y \
     libssl-dev \
     libelf-dev \
     libncurses5-dev \
+    libgtk-3-dev \
     build-essential \
     python3 \
     python3-pip \
