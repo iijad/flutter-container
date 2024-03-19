@@ -26,6 +26,7 @@ RUN sudo apt-get update && apt-get install -y \
 
 # Install Flutter and Dart
 
+RUN docker pull ghcr.io/jarrodcolburn/features/flutter-sdk:0.0.4
 
 RUN git clone https://github.com/flutter/flutter.git /opt/flutter
 RUN /opt/flutter/bin/flutter doctor
