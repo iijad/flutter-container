@@ -31,7 +31,7 @@ RUN sudo apt-get update && apt-get install -y \
 
 RUN git clone -b master https://github.com/flutter/flutter.git  /opt/flutter
 RUN /opt/flutter/bin/flutter doctor
-RUN /opt/flutter/bin/flutter upgrade
+RUN /opt/flutter/bin/flutter upgrade-packages
 
 
 ENV PATH="/opt/flutter/bin:$PATH"
