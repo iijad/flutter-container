@@ -29,7 +29,7 @@ RUN sudo apt-get update && apt-get install -y \
 
 
 
-RUN git clone https://github.com/flutter/flutter.git  /opt/flutter
+RUN git clone -b master https://github.com/flutter/flutter.git  /opt/flutter
 RUN /opt/flutter/bin/flutter --version
 
 
@@ -52,8 +52,7 @@ RUN sudo chown -R $(id -u):$(id -g) /opt/flutter/bin/cache/.dartignore
 
 RUN export CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
-#Installing Dependancies
-RUN /opt/flutter/bin/flutter pub get
+
 
 
 EXPOSE 8080
