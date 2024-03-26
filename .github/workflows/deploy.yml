@@ -22,6 +22,7 @@ jobs:
                   channel: 'beta'
 
             - name: Build flutter web
+              working-directory: ./app
               run: flutter build web
               
             - name: Deploy
@@ -29,5 +30,5 @@ jobs:
               #if: github--ref == 'refs/heads/main'
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./build/web
+                  publish_dir: ./app/build/web
             
