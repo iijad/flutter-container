@@ -19,7 +19,7 @@ jobs:
             - name: Setup Flutter
               uses: subosito/flutter-action@v2
               with:
-                  flutter-version: '3.21.0'
+                  channel: 'beta'
 
             - name: Build flutter web
               run: build flutter web
