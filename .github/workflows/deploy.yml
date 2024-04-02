@@ -22,7 +22,7 @@ jobs:
                   channel: 'beta'
 
             - name: Build flutter web
-              working-directory: ./app
+              working-directory: ./app/build/web
               run: flutter build web
               
             - name: Deploy
