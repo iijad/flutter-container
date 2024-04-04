@@ -1,0 +1,3 @@
+### CI/CD Pipeline Environment
+
+The CI/CD Pipeline operates within the Github ecosystem, leverging GitHub Actions. Github Actions provides a flexible integrated environment for automating the software development lifecycle. The infrastructure primarily consists of GitHub's cloud-based services, enabling seamless integration with our version control system. Our target operating system for the pipeline is Linux, ensuring compatibility across various deployment environments. Additionally, network configurations are optimized to facilitate secure and efficient communication between the CI/CD pipeline components and external systems. 
