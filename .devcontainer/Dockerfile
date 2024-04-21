@@ -37,6 +37,15 @@ RUN /opt/flutter/bin/flutter upgrade-packages
 ENV PATH="/opt/flutter/bin:$PATH"
 ENV CMAKE_MAKE_PROGRAM=/usr/bin/ninja-build
 
+# Install Android SDK
+RUN wget -q https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip -O /tmp/android-sdk.zip \
+    && unzip -qq /tmp/android-sdk.zip -d /opt/android-sdk \
+    && rm /tmp/android-sdk.zip
+
+
+# Set up Android SDK path
+ENV ANDROID_SDK_ROOT=/opt/android-sdk
+ENV PATH="${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}"
 
 #Set up working directory to /app
 WORKDIR /app
