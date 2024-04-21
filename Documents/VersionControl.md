@@ -3,7 +3,7 @@
 Version Control is very critical for maintaining code integrity, tracking changes to the code over time, and enabling collaboration among members of a team. It ensures the stability of the codebase by allowing developers to revert to previous versions if needed, maintains a detailed history of changes for reference and auditing purposes, and facilitates collaboration through features like branching and merging.
 
 ### **Version Control System Used**
-Github was chosen as the version control system for this project, as there is a familiarity with the system, making it more comfortable to use as navigating and utilizing Github is a smoother process. 
+Git was chosen as the version control system for this project, as there is a familiarity with the system, making it more comfortable to use as navigating and utilizing Github is a smoother process. 
 
 ### **Repository Setup**
 The Repository is composed of four folders with a ***README.md***:
