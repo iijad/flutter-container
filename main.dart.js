@@ -19989,7 +19989,7 @@ A.a0c.prototype={
 $1(a){var s=A.c3().b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/a86e74cf06f7a7f5f3a52a9d6c1e8f62ef1253dc/":s)+a},
+if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/b4bfd459865a8d636f26aca0d330ae297c006c3c/":s)+a},
 $S:78}
 A.a0q.prototype={
 $1(a){this.a.remove()
